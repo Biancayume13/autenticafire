@@ -1,14 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import { KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View, TextInput, KeyboardAvoidingView,  TouchableOpacity  } from 'react-native';
 import React from 'react'
 
-export default function telalogin() {
+const TelaLogin = () => {
   return (
     <KeyboardAvoidingView
      style={styles.container}
      behavior="padding"
     >
-      <View style = {styles.inputContainer}>
+      <View style ={styles.inputContainer}>
       <TextInput
        placebolder="Email"
        // value= {email}
@@ -36,54 +35,58 @@ export default function telalogin() {
          //onPress={identificadordeInscricao}
          style={[styles.button, styles.buttonOutline]}
         > 
-        <Text style={styles.buttonOutlineText}></Text>
+        <Text style={styles.buttonOutlineText}>Registro</Text>
       </TouchableOpacity>
      </View>
     </KeyboardAvoidingView>
   )
 }
 
-const styles = StyleSheet.create({ 
+export default  TelaLogin;
+
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignIntems: 'center',
+    alignItems: 'center',
   },
-  InputContainer:{
-   width: '80%'
+  inputContainer: {
+    width: '80%'
   },
-  Input: { 
-  backgroundColor: 'lightblue',
-  paddingHorizontal: 15,
-  paddingVerdical: 10,
-  borderRadius: 10,
-  marginTop: 5,
-  },
-  buttonContainer: {
-    windth: '60',
-    justifyContent: 'center',
-    alignIntems: 'center',
-    marginTop: 40,
-  },
-  buton: {
-    windth: '100',
-    backgroundColor: 'lightorange',
-    padding: 15,
+  input: {
+    backgroundColor: 'lightblue',
+    paddingHorizontal: 15,
+    paddingVertical: 10,
     borderRadius: 10,
-  },
-  buttonOutline: {
-    backgroundColor: 'ligtblue',
-    borderColor: 'lightorange',
-    borderWidth: 2,
     marginTop: 5,
   },
+  buttonContainer: {
+    width: '60%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 40,
+  },
+  button: {
+    backgroundColor: 'lightblue',
+    width: '100%',
+    padding: 15,
+    borderColor: '#4071b0',
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+  buttonOutline: {
+    backgroundColor: 'white',
+    marginTop: 5,
+    borderColor: 'lightgray',
+    borderWidth: 2,
+  },
   buttonText: {
-    Color: 'darkblue',
+    color: 'darkblue',
     fontWeight: '700',
     fontSize: 16,
   },
   buttonOutlineText: {
-    Color: 'black',
+    color: 'black',
     fontWeight: '700',
     fontSize: 16,
   },
